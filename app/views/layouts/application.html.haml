@@ -1,0 +1,31 @@
+!!!
+%html
+	%head
+		%title Tavern
+
+		= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons"
+		= csrf_meta_tags
+		= action_cable_meta_tag
+
+		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+		= #stylesheet_link_tag params[:controller]
+		= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+
+
+		%meta{:content => "text/html; charset=US-ASCII", "http-equiv" => "content-type"}
+		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+		%link{:href => "https://d13yacurqjgara.cloudfront.net/users/2156/screenshots/988487/slice_1_1x.png", :rel => "shortcut icon"}/
+
+%body
+
+	= render "layouts/header"
+
+	%main
+		.container
+			%div=yield
+
+	= #render "layouts/footer"
+
+
+	:javascript
+		Materialize.toast("#{flash[:notice]}", 4000);

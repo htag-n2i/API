@@ -31,10 +31,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 
-# customs gems
+# custom gems
 gem 'haml'
 gem 'materialize-sass'
 gem 'devise'
+gem 'active_model_serializers'
 
 
 group :development, :test do

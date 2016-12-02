@@ -5,8 +5,8 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    if params[:long] && params[:lat]
-      Event.near(params[:lat], params[:long], 20, :order => true)
+    if params[:lat] && params[:long]
+      @events = Event.near([params[:lat], params[:long]], 20)
     else
       @events = Event.all
     end

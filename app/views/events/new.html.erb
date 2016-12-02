@@ -1,4 +1,10 @@
-<%= link_to 'Back', events_path, class: "waves-effect waves-teal btn-flat" %>
-<h2>New Event</h2>
+<%= link_to 'Back', "/", class: "waves-effect waves-teal btn-flat" %>
 
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel">
+<h2>New Event</h2>
 <%= render 'form', event: @event %>
+</div>
+</div>
+</div>

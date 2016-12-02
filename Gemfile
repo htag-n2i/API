@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 
 # custom gems
+gem 'rack-cors'
 gem 'haml'
 gem 'materialize-sass'
 gem 'devise'

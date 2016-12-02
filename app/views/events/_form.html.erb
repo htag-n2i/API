@@ -16,13 +16,13 @@
 
     <div class="row">
       <div class="input-field col s6">
-        <%= f.label :title %>
+        <%= f.label :title, "Titre" %>
         <%= f.text_field :title %>
       </div>
 
       <div class="input-field col s6">
         <%= f.select :event_type, Event.type_events.keys.map {|role| [role.titleize, role]} %>
-        <%= f.label :event_type %>
+        <%= f.label :event_type, "Type d'évènement" %>
       </div>
     </div>
 
@@ -42,19 +42,19 @@
 
     <div class="row">
       <div class="input-field col s12">
-        <%= f.label :adress %>
+        <%= f.label :adress, "Adresse" %>
         <%= f.text_field :adress %>
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col s6">
-        <%= f.label :city %>
+        <%= f.label :city, "Ville" %>
         <%= f.text_field :city %>
       </div>
 
       <div class="input-field col s6">
-        <%= f.label :country %>
+        <%= f.label :country, "Pays" %>
         <%= f.text_field :country %>
       </div>
     </div>

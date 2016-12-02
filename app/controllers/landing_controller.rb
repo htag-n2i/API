@@ -1,5 +1,9 @@
 class LandingController < ApplicationController
   def index
-    render :template => 'layouts/landing'
+    if ! current_user.nil? then
+        redirect_to "/home"
+    else
+        render :template => 'layouts/landing'
+    end
   end
 end

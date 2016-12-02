@@ -11,52 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <div class="row">
+    <div class="input-field col s12">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
+  <div class="row">
+    <div class="input-field col s12">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: "materialize-textarea" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :adress %>
-    <%= f.text_field :adress %>
+  <div class="row">
+    <div class="input-field col s12">
+        <%= f.label :adress %>
+        <%= f.text_field :adress %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
+  <div class="row">
+    <div class="input-field col s6">
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :country %>
+        <%= f.text_field :country %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :country %>
-    <%= f.text_field :country %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.text_area :image %>
-  </div>
-
-  <div class="field">
-    <%= f.label :latitude %>
-    <%= f.text_field :latitude %>
-  </div>
-
-  <div class="field">
-    <%= f.label :longitude %>
-    <%= f.text_field :longitude %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="input-field col s12">
+        <%= f.submit "Valider", class: 'btn' %>
+    </div>
   </div>
 <% end %>

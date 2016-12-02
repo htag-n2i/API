@@ -36,6 +36,7 @@ gem 'haml'
 gem 'materialize-sass'
 gem 'devise'
 gem 'active_model_serializers'
+gem 'geocoder'
 
 
 group :development, :test do

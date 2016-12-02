@@ -18,3 +18,7 @@ $primary-color: color("cyan", "darken-3") !default;
 $secondary-color: color("red", "lighten-2") !default;
 @import 'materialize';
 // @import "partials/_variables";
+
+// .input-field.col label {
+//   left: 0rem;
+// }

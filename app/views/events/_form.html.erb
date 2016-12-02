@@ -1,42 +1,68 @@
-<%= form_for(event) do |f| %>
-  <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+<div class="row">
+  <%= form_for(event) do |f| %>
+    <div class="row">
+      <% if event.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-      <ul>
-      <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% event.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="input-field col s6">
+        <%= f.select :event_type, Event.type_events.keys.map {|role| [role.titleize, role]} %>
+        <%= f.label :event_type %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label :date %>
+        <input type="date" class="datepicker">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "materialize-textarea" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label :adress %>
+        <%= f.text_field :adress %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+      </div>
+
+      <div class="input-field col s6">
+        <%= f.label :country %>
+        <%= f.text_field :country %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.submit "Valider", class: 'btn' %>
+      </div>
     </div>
   <% end %>
-
-  <div class="input-field col s12">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="input-field col s12">
-    <%= f.select :event_type, Event.type_events.keys.map {|role| [role.titleize, role]} %>
-    <%= f.label :event_type %>
-  </div>
-
-  <div class="input-field col s12">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: "materialize-textarea" %>
-  </div>
-
-  <div class="input-field col s12">
-    <%= f.label :adress %>
-    <%= f.text_field :adress %>
-  </div>
-
-  <div class="input-field col s12">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-  </div>
-
-  <div class="input-field col s12">
-    <%= f.submit "Valider", class: 'btn' %>
-  </div>
-<% end %>
+</div>

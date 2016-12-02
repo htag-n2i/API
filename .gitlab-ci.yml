@@ -1,0 +1,4 @@
+deploy:
+  script: deployer api master
+  only:
+    - master
